@@ -15,6 +15,7 @@ load_dotenv()
 PRACTICUM_TOKEN = os.getenv('PRACTICUM_TOKEN')
 TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
 TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
+LOGGING_LEVEL = os.getenv('LOGGING_LEVEL', 'INFO').upper()
 
 RETRY_TIME = 600
 ENDPOINT = 'https://practicum.yandex.ru/api/user_api/homework_statuses/'
@@ -28,7 +29,7 @@ HOMEWORK_STATUSES = {
 }
 
 logging.basicConfig(
-    level=logging.DEBUG,
+    level=LOGGING_LEVEL,
     format='%(asctime)s %(levelname)s %(message)s',
 )
 
