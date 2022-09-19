@@ -28,7 +28,7 @@ HOMEWORK_STATUSES = {
 }
 
 logging.basicConfig(
-    level=logging.DEBUG,
+    level=logging.ERROR,
     format='%(asctime)s %(levelname)s %(message)s',
 )
 
